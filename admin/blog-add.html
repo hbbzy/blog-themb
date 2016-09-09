@@ -20,6 +20,7 @@
     <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
 	<link rel="stylesheet" href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css">
     <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="UEditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="UEditor/ueditor.all.min.js"> </script>
     <script src="UEditor/lang/zh-cn/zh-cn.js"></script>
@@ -129,7 +130,7 @@
 							</div>
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
-                                <label class="font-noraml col-sm-2">缩略图</label>
+                                <label class="control-label col-sm-2">缩略图</label>
                                 <div class="col-sm-10">
 									<input type="file" class="form-control" style="display: none;">
 								</div>
@@ -158,6 +159,67 @@
 							</div>
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
+								<label class="col-sm-2 control-label">原文链接</label>
+								<div class="input-group col-sm-6">
+                                        <input type="text" class="form-control" value="" placeholder="原文链接" >
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">排序</label>
+								<div class="input-group col-sm-4">
+                                        <input type="text" class="form-control" value="" placeholder="排序" >
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">点赞数</label>
+								<div class="input-group col-sm-4">
+                                        <input type="text" class="form-control" value="" placeholder="点赞数" >
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">状态</label>
+								<div class="input-group col-sm-10">
+									<div class="checkbox checkbox-inline checkbox-primary">
+										<input id="ck1" type="checkbox" value="0">
+										<label for="ck1">待审核</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary">
+										<input id="ck2" type="checkbox" value="1">
+										<label for="ck2">审核通过</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="2" id="ck3">
+										<label for="ck3">
+											拒绝
+										</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="3" id="ck4">
+										<label for="ck4">
+											删除
+										</label>
+									</div>
+                                </div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">添加时间</label>
+								<div class="input-group adddate date col-sm-4">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<input type="text" value="" class="form-control">
+								</div>
+                            </div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">修改时间</label>
+								<div class="input-group editdate date col-sm-4">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<input type="text" value="" class="form-control">
+								</div>
+                            </div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-2">
                                     <button type="submit" class="btn btn-primary">保存内容</button>
                                     <button type="submit" class="btn btn-white">取消</button>
@@ -175,9 +237,23 @@
     <script src="js/plugins/iCheck/icheck.min.js"></script>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
     <script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
-		var ue = UE.getEditor('content');
+		var ue = UE.getEditor('content',{initialFrameHeight:450});
 		$('input[type="file"]').prettyFile();
+		$('.input-group.adddate').datepicker({
+			todayBtn: 'linked',
+			keyboardNavigation: !1,
+			forceParse: !1,
+			calendarWeeks: !0,
+			autoclose: !0
+		  }),$('.input-group.editdate').datepicker({
+			todayBtn: 'linked',
+			keyboardNavigation: !1,
+			forceParse: !1,
+			calendarWeeks: !0,
+			autoclose: !0
+		  })
 	</script>
 </body>
 
