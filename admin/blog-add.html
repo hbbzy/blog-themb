@@ -19,6 +19,10 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
 	<link rel="stylesheet" href="css/plugins/colorpicker/css/bootstrap-colorpicker.min.css">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="UEditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="UEditor/ueditor.all.min.js"> </script>
+    <script src="UEditor/lang/zh-cn/zh-cn.js"></script>
 </head>
 
 <body class="gray-bg">
@@ -38,38 +42,121 @@
 						<form role="form" class="form-horizontal">
 							<div class="form-group">
 								<label class="col-sm-2 control-label">文章标题</label>
-								<div class="input-group colorpicker-element col-sm-10">
-                                        <input type="text" class="form-control colorpicker-demo1" value="" placeholder="请输入您注册的E-mail" >
-                                        <span class="input-group-addon"><i style="background-color: rgb(0, 0, 0);"></i></span>
+								<div class="input-group col-sm-10">
+                                        <input type="text" class="form-control" value="" placeholder="请输入您注册的E-mail" >
                                 </div>
 							</div>
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">副标题</label>
-								<div class="input-group colorpicker-element col-sm-10">
-                                        <input type="text" class="form-control colorpicker-demo1" value="" placeholder="请输入您注册的E-mail" >
-                                        <span class="input-group-addon"><i style="background-color: rgb(0, 0, 0);"></i></span>
+								<div class="input-group col-sm-10">
+                                        <input type="text" class="form-control" value="" placeholder="请输入您注册的E-mail" >
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">分类</label>
+								<div class="input-group col-sm-10">
+									<select name="account" class="form-control m-b">
+										<option>选项 1</option>
+										<option>选项 2</option>
+										<option>选项 3</option>
+										<option>选项 4</option>
+									</select>
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">SEO标题</label>
+								<div class="input-group col-sm-10">
+                                        <input type="text" class="form-control colorpicker-demo1" value="" placeholder="SEO标题" name="seotitle">
+                                        <span class="help-block m-b-none">如果留空，则使用文章标题</span>
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">SEO 描述</label>
+								<div class="input-group col-sm-10">
+                                        <input type="text" class="form-control" value="" placeholder="SEO 描述"  name="seodesc">
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">SEO 关键字</label>
+								<div class="input-group col-sm-10">
+                                        <input type="text" class="form-control" value="" placeholder="SEO 关键字" name="seokeywords">
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">标签</label>
+								<div class="input-group col-sm-10">
+									<div class="checkbox checkbox-inline checkbox-primary">
+										<input id="ck1" type="checkbox" value="0">
+										<label for="ck1">原创</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="1" id="ck2">
+										<label for="ck2">
+											转载
+										</label>
+									</div>
                                 </div>
 							</div>
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">推荐位</label>
-								<div class="col-sm-10">
-									<div class="checkbox i-checks">
-											<label class="">
-												<div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" value="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div> <i></i> 置顶</label>
-											<label class="">
-												<div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" value="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div> <i></i> 热门</label>
-											<label class="">
-												<div class="icheckbox_square-green" style="position: relative;"><input type="checkbox" value="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins></div> <i></i> 首页推荐</label>
+								<div class="input-group col-sm-10">
+									<div class="checkbox checkbox-inline checkbox-primary">
+										<input id="ck1" type="checkbox" value="0">
+										<label for="ck1">热门</label>
 									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="1" id="ck2">
+										<label for="ck2">
+											首页推荐
+										</label>
+									</div>
+                                </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">内容</label>
+								<div class="col-sm-10">
+									<textarea id="content">
+									</textarea>
 								</div>
 							</div>
 							<div class="hr-line-dashed"></div>
 							<div class="form-group">
-								<label class="col-sm-2 control-label">密码</label>
-								<div class="col-sm-10"><input type="password" placeholder="请输入密码" class="form-control"></div>
+                                <label class="font-noraml col-sm-2">缩略图</label>
+                                <div class="col-sm-10">
+									<input type="file" class="form-control" style="display: none;">
+								</div>
+                            </div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">访问权限</label>
+								<div class="input-group col-sm-10">
+									<div class="checkbox checkbox-inline checkbox-primary">
+										<input id="ck1" type="checkbox" value="0">
+										<label for="ck1">公开</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="1" id="ck2">
+										<label for="ck2">
+											朋友可见
+										</label>
+									</div>
+									<div class="checkbox checkbox-inline checkbox-primary" >
+										<input type="checkbox" value="2" id="ck3">
+										<label for="ck3">
+											私密
+										</label>
+									</div>
+                                </div>
 							</div>
+							<div class="hr-line-dashed"></div>
 							<div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-2">
                                     <button type="submit" class="btn btn-primary">保存内容</button>
@@ -86,12 +173,12 @@
     <script src="js/bootstrap.min.js?v=3.3.6"></script>
     <script src="js/content.min.js?v=1.0.0"></script>
     <script src="js/plugins/iCheck/icheck.min.js"></script>
-    <script>
-        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
-    </script>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
-	<script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
-	<script src="js/demo/form-advanced-demo.min.js"></script>
+    <script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script type="text/javascript">
+		var ue = UE.getEditor('content');
+		$('input[type="file"]').prettyFile();
+	</script>
 </body>
 
 
